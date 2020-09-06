@@ -20,6 +20,7 @@ let chosen;
 let title;
 key = "!"
 let owner;
+let login_info;
 function swap(arr, pos1, pos2){
     //1, 2, 3
     let tmp = arr[pos1];
@@ -116,5 +117,5 @@ client.on("message", (msg) => {
 })
 
 
-client.login("NzQ5MTMxNzk0Mjg4NDc2MjMw.X0nhWQ.mMZ7wqloXry_QkqAY_GBfJOkz-U")
+client.login(login_info)
 
