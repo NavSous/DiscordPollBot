@@ -1,0 +1,14 @@
+{
+  "name": "discord-poll",
+  "version": "1.0.0",
+  "description": "A polling feature for the chat app discord written in Discord.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
