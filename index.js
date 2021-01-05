@@ -1,4 +1,3 @@
-const snip = require("C:/Users/nsouscode/Fun projects/jssnippets/snippets.js")
 const Discord = require("discord.js");
 const client = new Discord.Client();
 let poll = false;
@@ -27,7 +26,6 @@ function swap(arr, pos1, pos2){
     let tmp = arr[pos1];
     arr[pos1] = arr[pos2]
     arr[pos2] = tmp
-    snip.print("done")
 }
 client.once('ready', ()=> {
     let poll = false;
@@ -65,26 +63,21 @@ client.on("message", (msg) => {
         if(content == "!close" && msg.author.id == owner  && !content.includes("poll has been activated")){
         try{
             for(i=0; i<pollarr.length; i++){
-                snip.print(i+1)
                 maxarr.push(pollarr[i].votes)
             }
-            snip.print(maxarr)
-            //snip.print(Math.max(maxarr))
             chosen = Math.max.apply(null, maxarr);
 
             let chosenind = 0;
             for(i=0; i<pollarr.length; i++){
-                snip.print(i+1)
                 if(chosen == pollarr[i].votes){
                     chosenind = i
                     break
                 }
             }
-            snip.print(chosenind)
             msg.channel.send(`You chose ${pollarr[chosenind].name} with ${pollarr[chosenind].votes} votes!`)
         }
         catch (Error){
-            snip.print(Error)
+            console.log("Error")
         }         
         }
         if(content.includes("!new:") && !content.includes("poll has") && owner == msg.author.id){
@@ -97,9 +90,6 @@ client.on("message", (msg) => {
             pollarr.push(polladd);
 
         }
-        
-        
-        //snip.print(polladd)
     if(clist.includes("!")){
         if(content == "!info"){
             msg.channel.send("Welcome to DisPoll! This program allows you to add a poll to a discord server. To create a new poll, type in the chat, '!poll:{your poll name}'");
