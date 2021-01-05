@@ -20,6 +20,7 @@ let chosen;
 let title;
 key = "!"
 let owner;
+//Enter your bot login info (token) here
 let login_info;
 function swap(arr, pos1, pos2){
     //1, 2, 3
@@ -105,7 +106,7 @@ client.on("message", (msg) => {
             cur_channel = msg.channel;
             
         }
-        if(content.includes("!poll:")){
+        if(content.includes("!poll:") && !content.includes('Welcome to DisPoll')){
             owner = msg.author.id
             title1 = content.split(":")
             title = title1[1]
