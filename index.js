@@ -101,7 +101,7 @@ client.on("message", (msg) => {
         //snip.print(polladd)
     if(clist.includes("!")){
         if(content == "!info"){
-            msg.channel.send("Welcome to DisPoll! This program allows you to add a poll to a discord server. To create a new poll, type in the chat, '!po1ll:{your poll name}'");
+            msg.channel.send("Welcome to DisPoll! This program allows you to add a poll to a discord server. To create a new poll, type in the chat, '!poll:{your poll name}'");
             cur_channel = msg.channel;
             
         }
@@ -109,7 +109,7 @@ client.on("message", (msg) => {
             owner = msg.author.id
             title1 = content.split(":")
             title = title1[1]
-            msg.channel.send(`${title} poll has been activated. Send in your first poll option using the format '!ne/w:{your poll option here}'. Type '!create' to finish the poll and let people vote. Once people have voted type '!close' to close the poll.`)
+            msg.channel.send(`${title} poll has been activated. Send in your first poll option using the format '!new:{your poll option here}'. Type '!create' to finish the poll and let people vote. Once people have voted type '!close' to close the poll.`)
             poll = true;
             cur_channel = msg.channel;
         }
