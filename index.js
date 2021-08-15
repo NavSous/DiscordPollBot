@@ -46,10 +46,7 @@ client.on("message", (msg) => {
             }
             catch{
                 //pass
-            }
-            
-           
-            
+            }         
         }
         if(content.includes("!create") && !content.includes("poll has")){
                 //pollarr.splice(0,1)
@@ -106,7 +103,5 @@ client.on("message", (msg) => {
         }
     }
 })
-
-
 client.login(login_info)
 
